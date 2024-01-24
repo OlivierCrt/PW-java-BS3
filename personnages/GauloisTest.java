@@ -12,8 +12,8 @@ class GauloisTest {
 
     @BeforeEach
     void setUp() {
-        asterix = new Gaulois();
-        cesar = new Romain();
+        asterix = new Gaulois("asterix" , 5);
+        cesar = new Romain("cesar" , 5);
     }
 
     @Test
@@ -30,10 +30,6 @@ class GauloisTest {
     }*/
     @Test
     void main(){
-        asterix.nom="asterix" ;
-        cesar.nom = "Cesar";
-        cesar.force = 5 ;
-        asterix.force = 20 ;
         asterix.parler("test");
         asterix.frapper(cesar);
         System.out.println(asterix.nom);

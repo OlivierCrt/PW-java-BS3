@@ -4,9 +4,9 @@ public abstract class Personnage {
     protected String nom ;
     protected int force ;
 
-    public Personnage(){
-        nom = "" ;
-        force = 0 ;
+    public Personnage(String naa , int ff){
+        nom = naa ;
+        force = ff ;
     }
 
     public String getNom() {
@@ -14,7 +14,7 @@ public abstract class Personnage {
     }
 
     public void parler(String ph){
-        System.out.println(donnerAuteur()+nom+" dit :"+ph);
+        System.out.println(donnerAuteur()+" "+this.nom+" dit :"+ph);
     }
     protected abstract String donnerAuteur();
 
@@ -24,14 +24,14 @@ public abstract class Personnage {
             System.out.println("Aie !");
         }
         else {
-            System.out.println("J'abandonne...");
+            System.out.println("J'abandonne... dit "+nom);
             force = 0 ;
         }
 
     }
 
     public void frapper(Personnage p){
-        System.out.println(donnerAuteur()+nom+"assène un coup a :"+p.nom);
+        System.out.println(donnerAuteur()+" "+nom+" "+"assène un coup a :"+p.nom);
         p.recevoirCoup(force);
 
     }
