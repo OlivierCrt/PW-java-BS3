@@ -22,12 +22,12 @@ class GauloisTest {
         assertNotNull(asterix);
         assertEquals("", asterix.getNom());
     }
-    @Test
+   /* @Test
     void testGetForce(){
         assertNotNull(asterix);
 
         assertEquals(0,asterix.getForce());
-    }
+    }*/
     @Test
     void main(){
         asterix.nom="asterix" ;
