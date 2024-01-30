@@ -14,24 +14,24 @@ public abstract class Personnage {
     }
 
     public void parler(String ph){
-        System.out.println(donnerAuteur()+" "+this.nom+" dit :"+ph);
+        System.out.println("Le "+donnerAuteur()+" "+this.nom+" dit :"+ph);
     }
     protected abstract String donnerAuteur();
 
     public void recevoirCoup(int fc){
         force = force - fc ;
         if (force >0){
-            System.out.println("Aie !");
+            System.out.println("Le "+donnerAuteur() +" dit : Aie !");
         }
         else {
-            System.out.println("J'abandonne... dit "+nom);
+            System.out.println("Le "+donnerAuteur()+" "+nom+" dit : J'abandonne... ");
             force = 0 ;
         }
 
     }
 
     public void frapper(Personnage p){
-        System.out.println(donnerAuteur()+" "+nom+" "+"assène un coup a :"+p.nom);
+        System.out.println("Le "+donnerAuteur()+" "+nom+" "+"assène un coup au "+p.donnerAuteur()+" "+p.nom+".");
         p.recevoirCoup(force);
 
     }

@@ -30,7 +30,8 @@ class GauloisTest {
     }*/
     @Test
     void main(){
-        asterix.parler("test");
+        asterix.parler("Salut à tous");
+        cesar.parler("Des gaulois! Je vais perdre");
         asterix.frapper(cesar);
         System.out.println(asterix.nom);
 
