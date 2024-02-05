@@ -2,7 +2,7 @@ package tp_m_chaudet.personnages;
 
 public abstract class Personnage {
     protected String nom ;
-    protected int force ;
+    protected float force ;
 
     public Personnage(String naa , int ff){
         nom = naa ;
@@ -18,10 +18,10 @@ public abstract class Personnage {
     }
     protected abstract String donnerAuteur();
 
-    public void recevoirCoup(int fc){
+    public void recevoirCoup(float fc){
         force = force - fc ;
         if (force >0){
-            System.out.println("Le "+donnerAuteur() +" dit : Aie !");
+            System.out.println("Le "+donnerAuteur() +" " +getNom()+" dit : Aie !");
         }
         else {
             System.out.println("Le "+donnerAuteur()+" "+nom+" dit : J'abandonne... ");

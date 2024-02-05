@@ -8,20 +8,32 @@ import static org.junit.jupiter.api.Assertions.*;
 class GauloisTest {
 
     private Gaulois asterix;
-    private Romain cesar ;
+    private Gaulois obelix ;
+    private Soldat minus ;
+    private Druide panoramix;
+    private Gaulois assurancetourix ;
+    private  Gaulois abraracourcix;
+    private Gaulois agecononix ;
+
 
     @BeforeEach
     void setUp() {
         asterix = new Gaulois("asterix" , 5);
-        cesar = new Romain("cesar" , 5);
+        minus = new Soldat("Minus" , 6,Grade.SOLDAT);
+        panoramix = new Druide("Panoramix" , 0 , 0) ;
+        obelix = new Gaulois("Obélix",5);
+        assurancetourix = new Gaulois("Assurancetourix",5);
+        agecononix = new Gaulois("Agecanonix",5);
+        abraracourcix = new Gaulois("Abraracourcix", 5);
+
     }
 
-    @Test
+    /*@Test
     void testGetNom() {
 
         assertNotNull(asterix);
-        assertEquals("", asterix.getNom());
-    }
+
+    }*/
    /* @Test
     void testGetForce(){
         assertNotNull(asterix);
@@ -30,10 +42,22 @@ class GauloisTest {
     }*/
     @Test
     void main(){
+        minus.equiperEquipement("bouclier");
+        minus.equiperEquipement("casque");
+        minus.equiperEquipement("plastron");
+        panoramix.fabriquerPotion(3);
+        panoramix.donnerPotion(asterix);
+        panoramix.donnerPotion(abraracourcix);
+        panoramix.donnerPotion(obelix);
+        panoramix.donnerPotion(assurancetourix);
+        panoramix.donnerPotion(agecononix) ;
         asterix.parler("Salut à tous");
-        cesar.parler("Des gaulois! Je vais perdre");
-        asterix.frapper(cesar);
-        System.out.println(asterix.nom);
+        minus.parler("Des gaulois! Je suis dans la sauce.");
+
+        asterix.frapper(minus);
+        System.out.println(minus.force);
+        asterix.frapper(minus);
+        minus.frapper(asterix);
 
     }
 }

@@ -10,6 +10,11 @@ public class Soldat extends Romain{
     public Grade getGrade() {
         return this.grade;
     }
+    public void parler(String s){
+        System.out.println("Le "+getGrade()+" "+getNom()+" dit :" + s);
+
+
+    }
 
 
 
