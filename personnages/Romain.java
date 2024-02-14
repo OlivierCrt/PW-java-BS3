@@ -1,8 +1,8 @@
 package tp_m_chaudet.personnages;
 
 public class Romain extends Personnage{
-    protected String[] equipement = new String[3] ;
-    protected  int nombreequipement ;
+    private String[] equipement = new String[3] ;
+    private  int nombreequipement ;
     public Romain(String coo , int ghd) {
         super(coo , ghd);
     }
@@ -25,7 +25,7 @@ public class Romain extends Personnage{
         return true;
         }
         @Override
-    public void recevoirCoup(float fc){
+    public void recevoirCoup(int fc){
         int reduction =0 ;
         for(int i =0 ; i<nombreequipement ; i++){
             if (equipement[i] == "casque" ){

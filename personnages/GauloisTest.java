@@ -18,9 +18,9 @@ class GauloisTest {
 
     @BeforeEach
     void setUp() {
-        asterix = new Gaulois("asterix" , 5);
+        asterix = new Gaulois("asterix" , 2);
         minus = new Soldat("Minus" , 6,Grade.SOLDAT);
-        panoramix = new Druide("Panoramix" , 0 , 0) ;
+        panoramix = new Druide("Panoramix" , 0) ;
         obelix = new Gaulois("Obélix",5);
         assurancetourix = new Gaulois("Assurancetourix",5);
         agecononix = new Gaulois("Agecanonix",5);
@@ -53,7 +53,7 @@ class GauloisTest {
         panoramix.donnerPotion(agecononix) ;
         asterix.parler("Salut à tous");
         minus.parler("Des gaulois! Je suis dans la sauce.");
-
+        System.out.println(minus.force);
         asterix.frapper(minus);
         System.out.println(minus.force);
         asterix.frapper(minus);
