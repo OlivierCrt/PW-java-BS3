@@ -1,8 +1,12 @@
 package tp_m_chaudet.batailles;
 
-public interface BatailleInterface {
-    void preparerCombat();
-    void decrireCombat() ;
 
-    void donnerResultat() ;
+public interface BatailleInterface {
+
+    String decrireContexte();
+    String choisirCombattants();
+    String preparerCombat();
+    String decrireCombat();
+    String donnerResultat();
+
 }

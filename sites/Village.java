@@ -35,8 +35,7 @@ public class Village {
     }
     public Gaulois getChef() {return chef;}
 
-
-
-
-
+    public Gaulois[] getHabitants() {
+        return habitants;
+    }
 }

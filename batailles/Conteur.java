@@ -1,23 +1,28 @@
 package tp_m_chaudet.batailles;
 
+
+import tp_m_chaudet.personnages.Personnage;
+
 public class Conteur {
-    private String nom ;
+    private String nom;
 
-
-
-
-
-    //cons
-    public Conteur(String nom){
-        this.nom = nom ;
+    public Conteur(String nom) {
+        this.nom=nom;
     }
 
-    public void conterBataille (BatailleInterface bataille){
-        System.out.println("Le conteur " + nom +" conte la bataille : " );
-        bataille.preparerCombat();
-        bataille.decrireCombat();
-        bataille.donnerResultat();
+    public void raconterHistoire(BatailleInterface bataille, Personnage[] listePersonnages1, Personnage[] listePersonnages2) {
 
 
+        StringBuilder texte = new StringBuilder("Je suis "+nom+". "
+                + "Je vais vous conter une histoire qui se deroule en 50 avant Jesus-Christ, "
+                + "du temps ou la Gaule est occupee par les Romains.\n\n");
+
+        texte.append(bataille.decrireContexte());
+        texte.append(bataille.choisirCombattants());
+        texte.append(bataille.preparerCombat());
+        texte.append(bataille.decrireCombat());
+        texte.append(bataille.donnerResultat());
+        System.out.println(texte);
     }
+
 }

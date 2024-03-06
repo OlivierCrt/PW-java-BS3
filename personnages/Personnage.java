@@ -35,6 +35,12 @@ public abstract class Personnage {
         p.recevoirCoup(force/3);
 
     }
+    public boolean estATerre() {
+        if (force < 0) {
+            return true;
+        }
+        return false;
+    }
 
 
 }

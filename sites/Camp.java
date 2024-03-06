@@ -38,4 +38,5 @@ public class Camp {
         }
     }
     public Soldat getCommandant() {return commandant;}
+    public Soldat[] getSoldats() {return soldats;}
 }
