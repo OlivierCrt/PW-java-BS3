@@ -118,7 +118,7 @@ public class Embuscade implements BatailleInterface {
     }
 
     // Choisi 2 Soldats de grade soldat aleatoirement
-    public Soldat[] choisirSoldats(Soldat[] listeSoldat) {
+    public Soldat[] choisirSoldats(Soldat[] listeSoldat)  {
         Soldat[] listeChoisirSoldats = new Soldat[2];
         int[] listeIndexGradeSoldat = new int[listeSoldat.length];
         int tailleGradeSoldats = 0;
