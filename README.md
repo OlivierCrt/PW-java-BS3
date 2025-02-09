@@ -1,7 +1,7 @@
 # Object-Oriented Programming (OOP) Concepts in Java
 
 ## Description  
-This project is designed to help you learn and practice the fundamental concepts of Object-Oriented Programming (OOP) using Java. It covers key principles such as classes, objects, inheritance, polymorphism, encapsulation, and abstraction through practical examples and exercises.
+This project is designed to learn and practice the fundamental concepts of Object-Oriented Programming (OOP) using Java. It covers key principles such as classes, objects, inheritance, polymorphism, encapsulation, and abstraction through practical examples and exercises.
 
 ---
 
